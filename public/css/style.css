@@ -1,0 +1,97 @@
+* {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+h1{
+    color: green;
+    font-size: 44px;
+}
+
+
+span {
+    color: rgb(49, 151, 24);
+    font-size: 24px;
+}
+
+.completed {
+    color: rgb(191, 187, 187);
+    text-decoration: line-through;
+    font-size: 22px;
+}
+
+.item::marker {
+    color: rgb(122, 122, 114);
+    font-size: 26px;
+}
+
+.fa-trash {
+    color: gray;
+    /* Your initial styles for the trash icon */
+    font-size: 24px;
+    /* Adjust the font size as per your requirement */
+    transition: transform .2s;
+    /* Add a transition for the hover effect */
+}
+
+.fa-trash:hover {
+    cursor: pointer;
+    color: red;
+    transform: scale(1.5);
+    /* Make the icon 20% bigger on hover */
+}
+
+/* CSS animation for tilt effect */
+@keyframes tilt {
+    0%, 100% {
+        transform: translateX(0) rotate(0deg);
+    }
+
+    15%, 45%, 75%, 90% {
+        transform: translateX(-4px) rotate(-5deg);
+    }
+
+    30%, 60% {
+        transform: translateX(1px) rotate(65deg);
+    }
+}
+
+h2 {
+    color: orangered;
+}
+
+h2 ~ h2 {
+    color: blue;
+}
+
+input[type="text"] {
+    color: black;
+    width: 160px;
+    height: 35px;
+    padding-left: 12px;
+    border: 1px solid gray;
+    border-radius: 3px;
+    box-shadow: rgb(38, 57, 77) 0px 10px 30px -12px;
+}
+
+input[type="text"]::placeholder {
+    color: gray;
+    font-size: .8rem;
+    font-style: italic;
+    /* padding-left: 2px; */
+}
+
+input[type="submit"] {
+    color: #fff;
+    background: blue;
+    border: 1px solid gray;
+    width: 120px;
+    height: 40px;
+    border-radius: 3px;
+    box-shadow: rgb(38, 57, 77) 0px 12px 30px -10px;
+}
+
+input[type="submit"]:hover {
+    color: #fff;
+    background: green;
+    cursor: pointer;
+}
