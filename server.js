@@ -1,8 +1,9 @@
 const express = require('express');
 const app = express();
 const MongoClient = require('mongodb').MongoClient;
-const PORT = 3000;
+const PORT = 2121;
 require('dotenv').config();
+// Run on: localhost:2121
 
 let db,
   dbConnectionStr = process.env.DB_STRING,
@@ -53,8 +54,7 @@ app.put('/markComplete', (request, response) => {
       $set: {
         completed: true
       }
-    },
-    {
+    },{
       sort: { _id: -1 },
       upsert: false
     }
@@ -76,8 +76,7 @@ app.put('/markUnComplete', (request, response) => {
       $set: {
         completed: false
       }
-    },
-    {
+    },{
       sort: { _id: -1 },
       upsert: false
     }
