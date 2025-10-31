@@ -2,7 +2,13 @@
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
 
-h1{
+.todo {
+    display: flex;
+    flex-direction: column;
+    margin-left: 50px;
+}
+
+h1 {
     color: green;
     font-size: 44px;
 }
@@ -10,6 +16,7 @@ h1{
 span {
     color: rgb(49, 151, 24);
     font-size: 24px;
+    cursor: pointer;
 }
 
 .completed {
@@ -32,7 +39,7 @@ span {
 .fa-trash:hover {
     cursor: pointer;
     color: red;
-    transform: scale(1.5);
+    transform: scale(1.2);
 }
 
 /* CSS animation for tilt effect */

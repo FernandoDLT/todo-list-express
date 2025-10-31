@@ -51,9 +51,7 @@ app.post('/addTodo', (request, response) => {
 });
 
 app.put('/markComplete', (request, response) => {
-  db.collection('todos').updateOne(
-    { thing: request.body.itemFromJS },
-    {
+  db.collection('todos').updateOne({ thing: request.body.itemFromJS },{
       $set: {
         completed: true
       }

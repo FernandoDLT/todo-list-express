@@ -2,6 +2,7 @@ const deleteBtn = document.querySelectorAll('.fa-trash');
 const item = document.querySelectorAll('.item span');
 const itemCompleted = document.querySelectorAll('.item span.completed');
 
+// Event listeners with tilt animation
 Array.from(deleteBtn).forEach((element) => {
   element.addEventListener('click', () => {
     const itemText = element.parentNode.querySelector('span').innerText;
@@ -9,6 +10,11 @@ Array.from(deleteBtn).forEach((element) => {
     applyTiltAnimation(element);
   });
 });
+
+// Wiuthout tilt animation/Must commented out @keyfarames in CSS
+// Array.from(deleteBtn).forEach((element) => {
+//   element.addEventListener('click', deleteItem);
+// });
 
 Array.from(item).forEach((element) => {
   element.addEventListener('click', markComplete);
@@ -18,7 +24,10 @@ Array.from(itemCompleted).forEach((element) => {
   element.addEventListener('click', markUnComplete);
 });
 
+// Line #29 commented out, used Without tilt animation,
+// add itemText to function parameter for animation
 async function deleteItem(itemText) {
+  // const itemText = this.parentNode.childNodes[1].innerText;
   try {
     const response = await fetch('deleteItem', {
       method: 'delete',
